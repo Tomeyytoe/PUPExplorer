@@ -1,0 +1,37 @@
+body {
+    background-color: #810403;
+}
+
+#map-container {
+    position: relative;
+}
+
+#description {
+    position: absolute;
+    top: 68px;
+    right: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 300px;
+    height: 559px;
+}
+
+#description h2 {
+    margin-top: 5px;
+    text-align: center;
+    font-size: 17px;
+}
+
+#description p {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 13px;
+}
+
+#description img {
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 25px;
+}
