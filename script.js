@@ -21,8 +21,9 @@ var searchButton = document.getElementById('search-button');
 
     for (var i = 0; i < areas.length; i++) {
       var location = areas[i].getAttribute('data-location').toLowerCase();
+      var searchTerms = areas[i].getAttribute('search-terms').toLowerCase().split(',');
 
-      if (location === searchTerm) {
+      if (location === searchTerm || searchTerms.includes(searchTerm)) {
         foundArea = areas[i];
         break;
       }
