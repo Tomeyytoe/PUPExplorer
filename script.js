@@ -12,6 +12,9 @@ var areas = document.getElementsByTagName('area');
         description.innerHTML += '<p>' + descriptionText + '</p>';
       });
 
+
+/* ----- SEARCH ----- */
+
 var searchInput = document.getElementById('search-input');
 var searchButton = document.getElementById('search-button');
 
