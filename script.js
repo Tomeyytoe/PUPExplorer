@@ -16,3 +16,35 @@ var areas = document.getElementsByTagName('area');
         description.innerHTML = '';
       });
     }
+
+
+/* ----- TAB LINKS ----- */
+
+var tabContainers = document.getElementsByClassName("tab-container");
+
+Array.from(tabContainers).forEach(function(tabContainer) {
+  var tablinks = tabContainer.getElementsByClassName("tab-links");
+  var tabcontents = tabContainer.getElementsByClassName("tab-contents");
+
+  Array.from(tablinks).forEach(function(tablink) {
+    tablink.addEventListener("click", function(event) {
+      openTabDynamic(event, this.getAttribute("data-tab"), tabContainer);
+    });
+  });
+});
+
+function openTabDynamic(event, tabName, tabContainer) {
+  var tablinks = tabContainer.getElementsByClassName("tab-links");
+  var tabcontents = tabContainer.getElementsByClassName("tab-contents");
+
+  Array.from(tablinks).forEach(function(tablink) {
+    tablink.classList.remove("active-link");
+  });
+
+  Array.from(tabcontents).forEach(function(tabcontent) {
+    tabcontent.classList.remove("active-tab");
+  });
+
+  event.currentTarget.classList.add("active-link");
+  tabContainer.querySelector("#" + tabName).classList.add("active-tab");
+}
