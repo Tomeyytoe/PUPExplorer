@@ -12,6 +12,33 @@ var areas = document.getElementsByTagName('area');
         description.innerHTML += '<p>' + descriptionText + '</p>';
       });
 
+var searchInput = document.getElementById('search-input');
+var searchButton = document.getElementById('search-button');
+
+  searchButton.addEventListener('click', function() {
+    var searchTerm = searchInput.value.toLowerCase();
+    var foundArea = null;
+
+    for (var i = 0; i < areas.length; i++) {
+      var location = areas[i].getAttribute('data-location').toLowerCase();
+      var searchTerms = areas[i].getAttribute('search-terms').toLowerCase().split(',');
+
+      if (location === searchTerm || searchTerms.includes(searchTerm)) {
+        foundArea = areas[i];
+        break;
+      }
+    }
+
+    if (foundArea) {
+      description.innerHTML = '<img src="' + foundArea.getAttribute('data-image') + '" alt="' + foundArea.getAttribute('data-location') + ' Image" />';
+      description.innerHTML += '<h2>' + foundArea.getAttribute('data-location') + '</h2>';
+      description.innerHTML += '<p>' + foundArea.getAttribute('data-description') + '</p>';
+
+    } else {
+      description.innerHTML = 'Area not found.';
+    }
+  });
+
       areas[i].addEventListener('mouseout', function() {
         description.innerHTML = '';
       });
