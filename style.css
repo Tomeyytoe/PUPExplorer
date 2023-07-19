@@ -2,10 +2,6 @@ body {
     background-color: #810403;
 }
 
-#map-container {
-    position: relative;
-}
-
 #header {
     position: fixed;
     background-color: #810403;
@@ -150,6 +146,857 @@ body {
     100% { left: -300%; }
 }
 
+/* ----- MAP SECTION ----- */
+.map img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#btn_lib {
+    position: absolute;
+    top:192px;
+    left: 395px;
+    background-color: maroon;
+    border-color: white;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 2px 1px;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+#dia_lib{
+    display: none;
+    position: absolute;
+    top:146px;
+    left: 250px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease; 
+}
+
+#btn_lib:hover + #dia_lib{
+    display: block;
+    opacity: 5;
+}  
+
+
+#btn_labhs {
+    position: absolute;
+    top:182px;
+    left: 235px;
+    background-color: maroon; opacity: 1;
+    border-color: white;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 2px 1px;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+#dia_labhs{
+    display: none;
+    position: absolute;
+    top:140px;
+    left: 150px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    z-index: 1;
+}
+
+#btn_labhs:hover + #dia_labhs{
+    display: block;
+}  
+
+#btn_charlie {
+    position: absolute;
+    top:290px;
+    left: 255px;
+    background-color: maroon; opacity: 1;
+    border-color: white;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 2px 1px;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+#dia_charlie {
+    display: none;
+    position: absolute;
+    top:245px;
+    left: 200px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    z-index: 1;
+}
+
+#btn_charlie:hover + #dia_charlie {
+    display: block;
+}  
+
+#btn_dome {
+    position: absolute;
+    top:488px;
+    left: 414px;
+    background-color: maroon; opacity: 1;
+    border-color: white;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 2px 1px;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+#dia_dome {
+    display: none;
+    position: absolute;
+    top:443px;
+    left: 375px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    z-index: 1;
+}
+
+#btn_dome:hover + #dia_dome {
+    display: block;
+}
+
+#btn_west {
+    position: absolute;
+    top:444px;
+    left: 340px;
+    background-color: maroon; opacity: 1;
+    border-color: white;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 2px 1px;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+#dia_west {
+    display: none;
+    position: absolute;
+    top:400px;
+    left: 300px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    z-index: 1;
+}
+
+#btn_west:hover + #dia_west {
+    display: block;
+}
+
+#btn_north {
+    position: absolute;
+    top:444px;
+    left: 485px;
+    background-color: maroon; opacity: 1;
+    border-color: white;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 2px 1px;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+#dia_north {
+    display: none;
+    position: absolute;
+    top:400px;
+    left: 450px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    z-index: 1;
+}
+
+#btn_north:hover + #dia_north {
+    display: block;
+}
+
+#btn_east {
+    position: absolute;
+    top:566px;
+    left: 414px;
+    background-color: maroon; opacity: 1;
+    border-color: white;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 2px 1px;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+#dia_east {
+    display: none;
+    position: absolute;
+    top:520px;
+    left: 390px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    z-index: 1;
+}
+
+#btn_east:hover + #dia_east {
+    display: block;
+}
+
+#btn_south {
+    position: absolute;
+    top:544px;
+    left: 320px;
+    background-color: maroon; opacity: 1;
+    border-color: white;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 2px 1px;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+#dia_south {
+    display: none;
+    position: absolute;
+    top:500px;
+    left: 280px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    z-index: 1;
+}
+
+#btn_south:hover + #dia_south {
+    display: block;
+}
+
+#btn_lagoon {
+    position: absolute;
+    top:310px;
+    left: 445px;
+    background-color: maroon; opacity: 1;
+    border-color: white;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 2px 1px;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+#dia_lagoon {
+    display: none;
+    position: absolute;
+    top:270px;
+    left: 410px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    z-index: 1;
+}
+
+#btn_lagoon:hover + #dia_lagoon {
+    display: block;
+}
+
+#btn_pe {
+    position: absolute;
+    top:165px;
+    left: 522px;
+    background-color: maroon; opacity: 1;
+    border-color: white;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 2px 1px;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+#dia_pe {
+    display: none;
+    position: absolute;
+    top:120px;
+    left: 487px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    z-index: 1;
+}
+
+#btn_pe:hover + #dia_pe {
+    display: block;
+}
+
+#btn_pool {
+    position: absolute;
+    top:150px;
+    left: 615px;
+    background-color: maroon; opacity: 1;
+    border-color: white;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 2px 1px;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+#dia_pool {
+    display: none;
+    position: absolute;
+    top:110px;
+    left: 550px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    z-index: 1;
+}
+
+#btn_pool:hover + #dia_pool {
+    display: block;
+}
+
+#btn_gym {
+    position: absolute;
+    top:150px;
+    left: 745px;
+    background-color: maroon; opacity: 1;
+    border-color: white;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 2px 1px;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+#dia_gym {
+    display: none;
+    position: absolute;
+    top:105px;
+    left: 600px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    z-index: 1;
+}
+
+#btn_gym:hover + #dia_gym {
+    display: block;
+}
+
+#btn_obelisk {
+    position: absolute;
+    top:303px;
+    left: 588px;
+    background-color: maroon; opacity: 1;
+    border-color: white;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 2px 1px;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+#dia_obelisk {
+    display: none;
+    position: absolute;
+    top:263px;
+    left: 530px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    z-index: 1;
+}
+
+#btn_obelisk:hover + #dia_obelisk {
+    display: block;
+}
+
+#btn_chapel {
+    position: absolute;
+    top:560px;
+    left: 532px;
+    background-color: maroon; opacity: 1;
+    border-color: white;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 2px 1px;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+#dia_chapel {
+    display: none;
+    position: absolute;
+    top:517px;
+    left: 505px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    z-index: 1;
+}
+
+#btn_chapel:hover + #dia_chapel {
+    display: block;
+}
+
+#btn_oval {
+    position: absolute;
+    top:500px;
+    left: 765px;
+    background-color: maroon; opacity: 1;
+    border-color: white;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 2px 1px;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+#dia_oval {
+    display: none;
+    position: absolute;
+    top:455px;
+    left: 715px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    z-index: 1;
+}
+
+#btn_oval:hover + #dia_oval {
+    display: block;
+}
+
+#btn_mabini {
+    position: absolute;
+    top:367px;
+    left: 643px;
+    background-color: maroon; opacity: 1;
+    border-color: white;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 2px 1px;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+#dia_mabini {
+    display: none;
+    position: absolute;
+    top:325px;
+    left: 590px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    z-index: 1;
+}
+
+#btn_mabini:hover + #dia_mabini {
+    display: block;
+}
+
+#btn_grandstand {
+    position: absolute;
+    top:430px;
+    left: 680px;
+    background-color: maroon; opacity: 1;
+    border-color: white;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 2px 1px;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+#dia_grandstand {
+    display: none;
+    position: absolute;
+    top:390px;
+    left: 630px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    z-index: 1;
+}
+
+#btn_grandstand:hover + #dia_grandstand {
+    display: block;
+}
+
+#btn_pylon {
+    position: absolute;
+    top:295px;
+    left: 889px;
+    background-color: maroon; opacity: 1;
+    border-color: white;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 2px 1px;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+#dia_pylon {
+    display: none;
+    position: absolute;
+    top: 255px;
+    left: 850px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    z-index: 1;
+}
+
+#btn_pylon:hover + #dia_pylon {
+    display: block;
+}
+
+#btn_pasig {
+    position: absolute;
+    top:393px;
+    left: 105px;
+    background-color: maroon; opacity: 1;
+    border-color: white;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 2px 1px;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+#dia_pasig {
+    display: none;
+    position: absolute;
+    top: 350px;
+    left: 80px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    z-index: 1;
+}
+
+#btn_pasig:hover + #dia_pasig {
+    display: block;
+}
+
+#btn_canteen {
+    position: absolute;
+    top:375px;
+    left: 250px;
+    background-color: maroon; opacity: 1;
+    border-color: white;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 2px 1px;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+#dia_canteen {
+    display: none;
+    position: absolute;
+    top: 335px;
+    left: 200px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    z-index: 1;
+}
+
+#btn_canteen:hover + #dia_canteen {
+    display: block;
+}
+
+#btn_stu_canteen {
+    position: absolute;
+    top:347px;
+    left: 272px;
+    background-color: maroon; opacity: 1;
+    border-color: white;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 2px 1px;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+#dia_stu_canteen {
+    display: none;
+    position: absolute;
+    top: 305px;
+    left: 220px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    z-index: 1;
+}
+
+#btn_stu_canteen:hover + #dia_stu_canteen {
+    display: block;
+}
+
+#btn_ferry {
+    position: absolute;
+    top:635px;
+    left: 299px;
+    background-color: maroon; opacity: 1;
+    border-color: white;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 2px 1px;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+#dia_ferry {
+    display: none;
+    position: absolute;
+    top: 595px;
+    left: 234px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    z-index: 1;
+}
+
+#btn_ferry:hover + #dia_ferry {
+    display: block;
+}
+
+#btn_campdev:hover + #dia_campdev {
+    display: block;
+}
+
+#btn_nutrifood {
+    position: absolute;
+    top:647px;
+    left: 525px;
+    background-color: maroon; opacity: 1;
+    border-color: white;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 2px 1px;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+#dia_nutrifood {
+    display: none;
+    position: absolute;
+    top: 605px;
+    left: 390px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    z-index: 1;
+}
+
+#btn_nutrifood:hover + #dia_nutrifood {
+    display: block;
+}
+
+#btn_court {
+    position: absolute;
+    top:237px;
+    left: 663px;
+    background-color: maroon; opacity: 1;
+    border-color: white;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 2px 1px;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+#dia_court {
+    display: none;
+    position: absolute;
+    top: 180px;
+    left: 548px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    z-index: 1;
+}
+
+#btn_court:hover + #dia_court {
+    display: block;
+}
+
+#btn_tennis {
+    position: absolute;
+    top:240px;
+    left: 760px;
+    background-color: maroon; opacity: 1;
+    border-color: white;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 2px 1px;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+#dia_tennis {
+    display: none;
+    position: absolute;
+    top: 200px;
+    left: 700px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    z-index: 1;
+}
+
+#btn_tennis:hover + #dia_tennis {
+    display: block;
+}
+
+#btn_community {
+    position: absolute;
+    top:560px;
+    left: 855px;
+    background-color: maroon; opacity: 1;
+    border-color: white;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 2px 1px;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+#dia_community {
+    display: none;
+    position: absolute;
+    top: 520px;
+    left: 800px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    z-index: 1;
+}
+
+#btn_community:hover + #dia_community {
+    display: block;
+}
+
+#btn_park {
+    position: absolute;
+    top:370px;
+    left: 570px;
+    background-color: maroon; opacity: 1;
+    border-color: white;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 2px 1px;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+#dia_park {
+    display: none;
+    position: absolute;
+    top: 330px;
+    left: 500px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    z-index: 1;
+}
+
+#btn_park:hover + #dia_park {
+    display: block;
+}
 
 /* ----- BUILDINGS SECTION ----- */
 
@@ -162,7 +1009,7 @@ body {
 }
 
 .container{
-    padding: 5px 5%;
+    padding: 50px 5%;
 }
 
 .row{

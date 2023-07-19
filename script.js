@@ -12,40 +12,39 @@ var areas = document.getElementsByTagName('area');
         description.innerHTML += '<p>' + descriptionText + '</p>';
       });
 
+// /* ----- SEARCH ----- */
 
-/* ----- SEARCH ----- */
+// var searchInput = document.getElementById('search-input');
+// var searchButton = document.getElementById('search-button');
 
-var searchInput = document.getElementById('search-input');
-var searchButton = document.getElementById('search-button');
+//   searchButton.addEventListener('click', function() {
+//     var searchTerm = searchInput.value.toLowerCase();
+//     var foundArea = null;
 
-  searchButton.addEventListener('click', function() {
-    var searchTerm = searchInput.value.toLowerCase();
-    var foundArea = null;
+//     for (var i = 0; i < areas.length; i++) {
+//       var location = areas[i].getAttribute('data-location').toLowerCase();
+//       var searchTerms = areas[i].getAttribute('search-terms').toLowerCase().split(',');
 
-    for (var i = 0; i < areas.length; i++) {
-      var location = areas[i].getAttribute('data-location').toLowerCase();
-      var searchTerms = areas[i].getAttribute('search-terms').toLowerCase().split(',');
+//       if (location === searchTerm || searchTerms.includes(searchTerm)) {
+//         foundArea = areas[i];
+//         break;
+//       }
+//     }
 
-      if (location === searchTerm || searchTerms.includes(searchTerm)) {
-        foundArea = areas[i];
-        break;
-      }
-    }
+//     if (foundArea) {
+//       description.innerHTML = '<img src="' + foundArea.getAttribute('data-image') + '" alt="' + foundArea.getAttribute('data-location') + ' Image" />';
+//       description.innerHTML += '<h2>' + foundArea.getAttribute('data-location') + '</h2>';
+//       description.innerHTML += '<p>' + foundArea.getAttribute('data-description') + '</p>';
 
-    if (foundArea) {
-      description.innerHTML = '<img src="' + foundArea.getAttribute('data-image') + '" alt="' + foundArea.getAttribute('data-location') + ' Image" />';
-      description.innerHTML += '<h2>' + foundArea.getAttribute('data-location') + '</h2>';
-      description.innerHTML += '<p>' + foundArea.getAttribute('data-description') + '</p>';
+//     } else {
+//       description.innerHTML = 'Area not found.';
+//     }
+//   });
 
-    } else {
-      description.innerHTML = 'Area not found.';
-    }
-  });
-
-      areas[i].addEventListener('mouseout', function() {
-        description.innerHTML = '';
-      });
-    }
+//       areas[i].addEventListener('mouseout', function() {
+//         description.innerHTML = '';
+//       });
+//     }
 
 
 /* ----- TAB LINKS ----- */
@@ -78,3 +77,4 @@ function openTabDynamic(event, tabName, tabContainer) {
   event.currentTarget.classList.add("active-link");
   tabContainer.querySelector("#" + tabName).classList.add("active-tab");
 }
+    }
