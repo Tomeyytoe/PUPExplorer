@@ -11,40 +11,40 @@ var areas = document.getElementsByTagName('area');
         description.innerHTML += '<h2>' + location + '</h2>';
         description.innerHTML += '<p>' + descriptionText + '</p>';
       });
+    }
 
 // /* ----- SEARCH ----- */
 
-// var searchInput = document.getElementById('search-input');
-// var searchButton = document.getElementById('search-button');
+function searchSection() {
+  // Get the entered keywords from the search input
+  const keywords = document.getElementById('section-search').value.toLowerCase().split(' ');
 
-//   searchButton.addEventListener('click', function() {
-//     var searchTerm = searchInput.value.toLowerCase();
-//     var foundArea = null;
+  // Find all the sections with data-search-terms attribute
+  const sections = document.querySelectorAll('[data-search-terms]');
 
-//     for (var i = 0; i < areas.length; i++) {
-//       var location = areas[i].getAttribute('data-location').toLowerCase();
-//       var searchTerms = areas[i].getAttribute('search-terms').toLowerCase().split(',');
+  // Search for the section that matches all the keywords
+  let foundSection = null;
+  sections.forEach((section) => {
+    const searchTerms = section.dataset.searchTerms.toLowerCase().split(' ');
 
-//       if (location === searchTerm || searchTerms.includes(searchTerm)) {
-//         foundArea = areas[i];
-//         break;
-//       }
-//     }
+    // Check if all the keywords are present in the search terms of the section
+    const allKeywordsMatch = keywords.every(keyword =>
+      searchTerms.some(term => term.includes(keyword))
+    );
 
-//     if (foundArea) {
-//       description.innerHTML = '<img src="' + foundArea.getAttribute('data-image') + '" alt="' + foundArea.getAttribute('data-location') + ' Image" />';
-//       description.innerHTML += '<h2>' + foundArea.getAttribute('data-location') + '</h2>';
-//       description.innerHTML += '<p>' + foundArea.getAttribute('data-description') + '</p>';
+    if (allKeywordsMatch) {
+      foundSection = section;
+      return; // Exit the loop early once a matching section is found
+    }
+  });
 
-//     } else {
-//       description.innerHTML = 'Area not found.';
-//     }
-//   });
-
-//       areas[i].addEventListener('mouseout', function() {
-//         description.innerHTML = '';
-//       });
-//     }
+  if (foundSection) {
+    // Scroll to the section
+    foundSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  } else {
+    alert('Section not found. Please enter valid name of the building.');
+  }
+}
 
 
 /* ----- TAB LINKS ----- */
@@ -77,4 +77,3 @@ function openTabDynamic(event, tabName, tabContainer) {
   event.currentTarget.classList.add("active-link");
   tabContainer.querySelector("#" + tabName).classList.add("active-tab");
 }
-    }

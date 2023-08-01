@@ -12,7 +12,12 @@
         <img src="images/HEADER.png" alt="Header Image" />
     </div>
 
-    <div id="amphitheater">
+    <div id="search-bar">
+        <input type="text" id="section-search" placeholder="Enter the name of the Building">
+        <button onclick="searchSection()">Search</button>
+    </div>
+
+    <div id="amphitheater" data-search-terms="amphi theater amphitheater">
         <div class="container">
             <div class="row">
               <div class="desc-col-1">
@@ -31,7 +36,7 @@
         </div>
     </div>
 
-    <div id="catwalk">
+    <div id="catwalk" data-search-terms="cat walk catwalk">
         <div class="container">
             <div class="row">
                 <div class="img-col-1">
@@ -50,7 +55,7 @@
         </div>  
     </div>
 
-    <div id="wall">
+    <div id="wall" data-search-terms="intramuros intra wall">
         <div class="container">
             <div class="row">
               <div class="desc-col-1">
@@ -71,7 +76,7 @@
         </div>
     </div>
 
-    <div id="charlie">
+    <div id="charlie" data-search-terms="charlie rosario" >
         <div class="container">
             <div class="row">
                 <div class="img-col-1">
@@ -96,7 +101,7 @@
         </div>  
     </div>
 
-    <div id="grandstand">
+    <div id="grandstand" data-search-terms="grand stand grandstand">
         <div class="container">
             <div class="row">
               <div class="desc-col-1">
@@ -116,7 +121,7 @@
         </div>
     </div>
 
-    <div id="gym">
+    <div id="gym" data-search-terms="gym gymnasium covered">
         <div class="container">
             <div class="row">
                 <div class="img-col-1">
@@ -137,7 +142,7 @@
         </div>  
     </div>
 
-    <div id="chapel">
+    <div id="chapel" data-search-terms="chapel church interfaith">
         <div class="container">
             <div class="row">
               <div class="desc-col-1">
@@ -156,7 +161,7 @@
         </div>
     </div>
 
-    <div id="lab">
+    <div id="lab" data-search-terms="lab laboratory highschool high">
         <div class="container">
             <div class="row">
                 <div class="img-col-1">
@@ -177,7 +182,7 @@
         </div>  
     </div>
     
-    <div id="lagoon">
+    <div id="lagoon" data-search-terms="lagoon food">
         <div class="container">
             <div class="row">
               <div class="desc-col-1">
@@ -201,7 +206,7 @@
         </div>
     </div>
     
-    <div id="dome">
+    <div id="dome" data-search-terms="dome main">
         <div class="container">
             <div class="row">
                 <div class="img-col-1">
@@ -220,7 +225,7 @@
         </div>  
     </div>
  
-    <div id="east">
+    <div id="east" data-search-terms="east wing">
         <div class="container">
             <div class="row">
               <div class="desc-col-1">
@@ -312,7 +317,7 @@
         </div>
     </div>
 
-    <div id="north">
+    <div id="north" data-search-terms="north wing">
         <div class="container">
             <div class="row">
                 <div class="img-col-1">
@@ -332,7 +337,7 @@
         </div>  
     </div>
     
-     <div id="south">
+     <div id="south" data-search-terms="south wing">
         <div class="container">
             <div class="row">
               <div class="desc-col-1">
@@ -429,7 +434,7 @@
         </div>
     </div>
 
-    <div id="west">
+    <div id="west" data-search-terms="west wing">
         <div class="container">
             <div class="row">
                 <div class="img-col-1">
@@ -517,7 +522,7 @@
         </div>  
     </div>
 
-    <div id="gate">
+    <div id="gate" data-search-terms="main gate entrance">
         <div class="container">
             <div class="row">
               <div class="desc-col-1">
@@ -537,7 +542,7 @@
         </div>
     </div>
 
-    <div id="park">
+    <div id="park" data-search-terms="free freedom park">
         <div class="container">
             <div class="row">
                 <div class="img-col-1">
@@ -559,7 +564,7 @@
         </div>  
     </div>
 
-    <div id="nalrlc">
+    <div id="nalrlc" data-search-terms="ninoy aquino learning reasearch library">
         <div class="container">
             <div class="row">
               <div class="desc-col-1">
@@ -579,7 +584,7 @@
         </div>
     </div>
 
-    <div id="open">
+    <div id="open" data-search-terms="open court">
         <div class="container">
             <div class="row">
                 <div class="img-col-1">
@@ -600,7 +605,7 @@
         </div>  
     </div>
 
-    <div id="cnfs">
+    <div id="cnfs" data-search-terms="college of nutrition dietetics food science sciences">
         <div class="container">
             <div class="row">
               <div class="desc-col-1">
@@ -623,7 +628,7 @@
         </div>
     </div>
 
-    <div id="oval">
+    <div id="oval" data-search-terms="oval field track">
         <div class="container">
             <div class="row">
                 <div class="img-col-1">
@@ -643,7 +648,7 @@
         </div>  
     </div>
 
-    <div id="chk">
+    <div id="chk" data-search-terms="college of guman kinetics pe physical education">
         <div class="container">
             <div class="row">
               <div class="desc-col-1">
@@ -666,7 +671,7 @@
         </div>
     </div>
 
-    <div id="river">
+    <div id="river" data-search-terms="river pasig">
         <div class="container">
             <div class="row">
                 <div class="img-col-1">
@@ -692,7 +697,7 @@
         </div>  
     </div>
 
-    <div id="ferry">
+    <div id="ferry" data-search-terms="ferry station">
         <div class="container">
             <div class="row">
               <div class="desc-col-1">
@@ -715,7 +720,7 @@
         </div>
     </div>
 
-    <div id="canteen">
+    <div id="canteen" data-search-terms="student canteen">
         <div class="container">
             <div class="row">
                 <div class="img-col-1">
@@ -740,7 +745,7 @@
         </div>  
     </div>
 
-    <div id="linear">
+    <div id="linear" data-search-terms="linear park line">
         <div class="container">
             <div class="row">
               <div class="desc-col-1">
@@ -761,7 +766,7 @@
         </div>
     </div>
 
-    <div id="brass">
+    <div id="brass" data-search-terms="mural brass sculpture">
         <div class="container">
             <div class="row">
                 <div class="img-col-1">
@@ -785,7 +790,7 @@
         </div>  
     </div>
 
-    <div id="obelisk">
+    <div id="obelisk" data-search-terms="obelisk mabini monument">
         <div class="container">
             <div class="row">
               <div class="desc-col-1">
@@ -810,7 +815,7 @@
         </div>
     </div>
 
-    <div id="pylon">
+    <div id="pylon" data-search-terms="pylon">
         <div class="container">
             <div class="row">
                 <div class="img-col-1">
@@ -833,7 +838,7 @@
         </div>  
     </div>
 
-    <div id="sampaguita">
+    <div id="sampaguita" data-search-terms="sampaguita building">
         <div class="container">
             <div class="row">
               <div class="desc-col-1">
@@ -850,7 +855,7 @@
         </div>
     </div>
 
-    <div id="shrine">
+    <div id="shrine" data-search-terms="apolinario mabini shrine">
         <div class="container">
             <div class="row">
                 <div class="img-col-1">
@@ -876,7 +881,7 @@
         </div>  
     </div>
 
-    <div id="pool">
+    <div id="pool" data-search-terms="olympic swimming pool">
         <div class="container">
             <div class="row">
               <div class="desc-col-1">
@@ -895,7 +900,7 @@
         </div>
     </div>
 
-    <div id="tennis">
+    <div id="tennis" data-search-terms="tennis open court">
         <div class="container">
             <div class="row">
                 <div class="img-col-1">
@@ -916,7 +921,7 @@
         </div>  
     </div>
 
-    <div id="water">
+    <div id="water" data-search-terms="water tank ufo">
         <div class="container">
             <div class="row">
               <div class="desc-col-1">
@@ -935,7 +940,7 @@
         </div>
     </div>
 
-    <div id="atleta">
+    <div id="atleta" data-search-terms="tahanan ng mga atleta">
         <div class="container">
             <div class="row">
                 <div class="img-col-1">
